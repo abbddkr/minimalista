@@ -1,10 +1,6 @@
 # minimalista
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
-
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to your new Jekyll theme Minimalista!
 
 ## Installation
 
@@ -28,13 +24,40 @@ Or install it yourself as:
 
     $ gem install minimalista
 
-## Usage
+## Theme Files
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+#### `` _layouts/ ``
+
+- `default.html`: used for pages and other non-post content
+- `post.html`: the layout for your posts
+- `home.html`: the layout to render all avaliable blog posts, in addition, it displays the first 3 categories that's related to every post.
+
+#### `` _includes/ ``
+
+- `footer.html`: defines the site's footer section.
+- `scripts.html`: a place for external/internal javascript sources
+- `navbar.html`: pure responsive navbar
+- `head.html`: defines ```<head> ``` in all layouts
+- `social_links.html`: renders an anchor tag,icon, and a title based on the ```minimalista:social_links``` data in the config file
+
+#### `` _sass/ ``
+- `_minimalista.scss`: imports scss files related to the theme
+- `_theme.scss`: consists of the theme's stylesheet
+
+#### `` _posts/ ``
+- for now it has two posts to demonstrate markdown syntax in front-end, feel free to edit or delete them.
+
+
+#### `` assets/ ``
+
+- `css/style.css`: to @import & convert the theme's stylesheet `from` ``` _sass ``` directory
+- `js`: consists only of one js file, feel free to modify it.
+- `svg`: icons
+
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/minimalista. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[abbddkr]/minimalista.
 
 ## Development
 
