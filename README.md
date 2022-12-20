@@ -1,6 +1,7 @@
 # minimalista
 
 Welcome to your new Jekyll theme Minimalista!
+![image](https://user-images.githubusercontent.com/21991379/208667021-11687466-0f92-4692-b4ba-457791a7a445.png)
 
 ## Installation
 
