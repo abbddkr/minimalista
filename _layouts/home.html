@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+
+<head>
+    {%- include head.html -%}
+</head>
+
+<body>
+
+    {%- include navbar.html -%}
+
+    <main class="page-content">
+        <div class="wrapper">
+            <div class="home">
+                <div class="site-title-mobile">
+                    <h2>{{ site.title }}</h2>
+                </div>
+
+                <div class="github-repo">
+
+                </div>
+
+                {{ content }}
+
+                <ul class="post-list">
+                    {% for post in site.posts %}
+                    <li>
+                        <h3>
+                            <a class="post-link" href="{{ post.url }}">
+                                {{ post.title }}
+                            </a>
+                        </h3>
+                        <p>
+                            {{ post.content | strip_html | truncatewords: 50 }}
+                        </p>
+                        <div class="post-details">
+                            <small>
+                                {%- if post.categories[0] -%}
+                                <img class="tags-icon" src="/assets/svg/icons/tags.svg" width="15" height="15">
+                                    <p class="hashtag-category">#{{ post.categories[0] }}</p>
+                                    <p class="hashtag-category">#{{ post.categories[1] }}</p>
+                                    <p class="hashtag-category">#{{ post.categories[2] }}</p>
+                                {%- endif -%}
+                                </small>
+                            <small>
+                                <img class="calendar-icon" src="/assets/svg/icons/calendar.svg" width="15" height="15">
+                                {%- assign date_format = site.minimalista.date_format | default: "%b %-d, %Y" -%}
+                                <p>{{ post.date | date: date_format }}</p>
+                            </small>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    {%- include footer.html -%}
+    {%- include scripts.html -%}
+
+</body>
+
+</html>

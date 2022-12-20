@@ -1,0 +1,21 @@
+<nav class="nav">
+    <div class="top-navbar">
+        <h3>
+            <a href="{{ site.url }}">
+                {{ site.title }}
+            </a>
+        </h3>
+        <a class="nav-toggle-button">
+            <img class="bars-icon" src="/assets/svg/icons/bars.svg" width="15" height="15">
+        </a>
+        <ul class="mobile-menu">
+            {% for page in site.pages %}
+            {% if page.title %}
+            <li>
+                <h4><a href="{{ page.url }}">{{ page.title }}</a></h4>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+        </div>
+    </nav>

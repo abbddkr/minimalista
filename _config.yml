@@ -1,0 +1,26 @@
+title: Your awesome title
+author:
+  name: abbddkr
+  email: abouddk7@gmail.com
+description: "Your awesome blog's description"
+url: "127.0.0.1:/4000/"
+show_excerpts: true
+sass:
+  style: compressed
+  sass_dir: _sass
+minimalista:
+  date_format: "%b %-d, %Y"
+
+  social_links:
+    - { platform: facebook,       link: "https://www.facebook.com/jekyll" }
+    - { platform: github,         link: "https://github.com/jekyll" }
+    - { platform: instagram,      link: "https://www.instagram.com/jekyll" }
+    - { platform: linkedin,       link: "https://www.linkedin.com/in/jekyll" }
+    - { platform: twitter,        link: "https://twitter.com/jekyllrb" }
+    - { platform: youtube,        link: "https://www.youtube.com/jekyll" }
+    - { platform: website,        link: "https://www.youtube.com" }
+
+theme: minimalista
+
+plugins:
+ - jekyll-seo-tag

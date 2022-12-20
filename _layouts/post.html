@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en" }}">
+
+<head>
+    {%- include head.html -%}
+</head>
+
+<body>
+
+    {%- include navbar.html -%}
+
+    {%- assign words_per_minute = 200 -%}
+    <main class="page-content">
+        <div class="wrapper">
+            <div class="single-page-content">
+                <div class="page-header">
+                    <div class="post-details">
+                        {% assign words = page.content | strip_html | number_of_words %}
+                        <small class="post-estimated-to-read-time">
+                            <img class="clock-icon" src="/assets/svg/icons/clock.svg" width="15" height="15">
+                            <p>
+                                {%- if words < words_per_minute -%} ≈ 1 Min. {%- else -%} ≈ {{ words |
+                                    divided_by:words_per_minute }} Minutes {%- endif -%} </p>
+                        </small>
+                        <small class="post-date">
+                            <img class="calendar-icon" src="/assets/svg/icons/calendar.svg" width="15" height="15">
+                            {%- assign date_format = site.minimalista.date_format | default: "%b %-d, %Y" -%}
+                            <p>{{ page.date | date: date_format}}</p>
+                        </small>
+                    </div>
+                    <h1>
+                        {{ page.title }}
+                    </h1>
+                </div>
+                <hr style="opacity:0.2">
+
+                <div class="content">
+                    {{ content }}
+                </div>
+
+                <div class="page-categories">
+                    <ul class="category-list">
+                        {% for category in page.categories %}
+                        <li>
+                            <img class="tags-icon" src="/assets/svg/icons/tag.svg" width="15" height="15">
+                            <a href="#">{{ category }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    {%- include footer.html -%}
+    {%- include scripts.html -%}
+
+</body>
+
+</html>
